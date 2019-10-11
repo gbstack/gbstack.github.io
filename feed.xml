@@ -1,0 +1,263 @@
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2019-09-30T17:19:31+08:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Your awesome title</title><subtitle>Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.</subtitle><entry><title type="html">Tensorflow load checkpoint</title><link href="http://localhost:4000/jekyll/update/2019/09/30/tensorflow-load-checkpoint.html" rel="alternate" type="text/html" title="Tensorflow load checkpoint" /><published>2019-09-30T16:43:40+08:00</published><updated>2019-09-30T16:43:40+08:00</updated><id>http://localhost:4000/jekyll/update/2019/09/30/tensorflow-load-checkpoint</id><content type="html" xml:base="http://localhost:4000/jekyll/update/2019/09/30/tensorflow-load-checkpoint.html">&lt;p&gt;When I try to load meta file from checkpoint directory
+&lt;code class=&quot;highlighter-rouge&quot;&gt;saver=tf.train.import_meta_graph('D:/waifu_recognition_master/waifu_recognition-master/checkpoint/model.ckpt-78681.meta')&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;I got following error&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;2019-09-30 16:24:03.436215: I tensorflow/core/platform/cpu_feature_guard.cc:141] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2
+Traceback (most recent call last):
+  File &quot;&amp;lt;input&amp;gt;&quot;, line 1, in &amp;lt;module&amp;gt;
+  File &quot;D:\Program Files\JetBrains\PyCharm 2019.1\helpers\pydev\_pydev_bundle\pydev_umd.py&quot;, line 197, in runfile
+    pydev_imports.execfile(filename, global_vars, local_vars)  # execute the script
+  File &quot;D:\Program Files\JetBrains\PyCharm 2019.1\helpers\pydev\_pydev_imps\_pydev_execfile.py&quot;, line 18, in execfile
+    exec(compile(contents+&quot;\n&quot;, file, 'exec'), glob, loc)
+  File &quot;E:/PycharmProjects/predict_call/tf-testload.py&quot;, line 18, in &amp;lt;module&amp;gt;
+    saver=tf.train.import_meta_graph('D:/waifu_recognition_master/waifu_recognition-master/checkpoint/model.ckpt-78681.meta')
+  File &quot;D:\Python37\lib\site-packages\tensorflow\python\training\saver.py&quot;, line 1435, in import_meta_graph
+    meta_graph_or_file, clear_devices, import_scope, **kwargs)[0]
+  File &quot;D:\Python37\lib\site-packages\tensorflow\python\training\saver.py&quot;, line 1457, in _import_meta_graph_with_return_elements
+    **kwargs))
+  File &quot;D:\Python37\lib\site-packages\tensorflow\python\framework\meta_graph.py&quot;, line 806, in import_scoped_meta_graph_with_return_elements
+    return_elements=return_elements)
+  File &quot;D:\Python37\lib\site-packages\tensorflow\python\util\deprecation.py&quot;, line 507, in new_func
+    return func(*args, **kwargs)
+  File &quot;D:\Python37\lib\site-packages\tensorflow\python\framework\importer.py&quot;, line 399, in import_graph_def
+    _RemoveDefaultAttrs(op_dict, producer_op_list, graph_def)
+  File &quot;D:\Python37\lib\site-packages\tensorflow\python\framework\importer.py&quot;, line 159, in _RemoveDefaultAttrs
+    op_def = op_dict[node.op]
+KeyError: 'ParallelInterleaveDataset'
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;hr /&gt;
+
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;saver&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;tf&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;train&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;import_meta_graph&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'D:/waifu_recognition_master/waifu_recognition-master/waifu_recognition_model/model.ckpt.meta'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;g&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;saver&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;restore&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;sess&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'models/tf-test4'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;I tried loading another meta graph, and load checkpoint from waifu_recognition, then following error appeared&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;2019-09-30 16:46:41.239249: W tensorflow/core/framework/op_kernel.cc:1401] OP_REQUIRES failed at save_restore_v2_ops.cc:184 : Not found: Key BoxPredictor_0/BoxEncodingPredictor/biases not found in checkpoint
+Traceback (most recent call last):
+  File &quot;D:\Python37\lib\site-packages\tensorflow\python\client\session.py&quot;, line 1334, in _do_call
+    return fn(*args)
+  File &quot;D:\Python37\lib\site-packages\tensorflow\python\client\session.py&quot;, line 1319, in _run_fn
+    options, feed_dict, fetch_list, target_list, run_metadata)
+  File &quot;D:\Python37\lib\site-packages\tensorflow\python\client\session.py&quot;, line 1407, in _call_tf_sessionrun
+    run_metadata)
+tensorflow.python.framework.errors_impl.NotFoundError: Key BoxPredictor_0/BoxEncodingPredictor/biases not found in checkpoint
+     [[]]
+During handling of the above exception, another exception occurred:
+Traceback (most recent call last):
+  File &quot;D:\Python37\lib\site-packages\tensorflow\python\training\saver.py&quot;, line 1276, in restore
+    {self.saver_def.filename_tensor_name: save_path})
+  File &quot;D:\Python37\lib\site-packages\tensorflow\python\client\session.py&quot;, line 929, in run
+    run_metadata_ptr)
+  File &quot;D:\Python37\lib\site-packages\tensorflow\python\client\session.py&quot;, line 1152, in _run
+    feed_dict_tensor, options, run_metadata)
+  File &quot;D:\Python37\lib\site-packages\tensorflow\python\client\session.py&quot;, line 1328, in _do_run
+    run_metadata)
+  File &quot;D:\Python37\lib\site-packages\tensorflow\python\client\session.py&quot;, line 1348, in _do_call
+    raise type(e)(node_def, op, message)
+tensorflow.python.framework.errors_impl.NotFoundError: Key BoxPredictor_0/BoxEncodingPredictor/biases not found in checkpoint
+     [[node save/RestoreV2 (defined at E:/PycharmProjects/predict_call/tf-testload.py:17) ]]
+Caused by op 'save/RestoreV2', defined at:
+  File &quot;D:\Program Files\JetBrains\PyCharm 2019.1\helpers\pydev\pydevconsole.py&quot;, line 399, in &amp;lt;module&amp;gt;
+    pydevconsole.start_client(host, port)
+  File &quot;D:\Program Files\JetBrains\PyCharm 2019.1\helpers\pydev\pydevconsole.py&quot;, line 327, in start_client
+    process_exec_queue(interpreter)
+  File &quot;D:\Program Files\JetBrains\PyCharm 2019.1\helpers\pydev\pydevconsole.py&quot;, line 174, in process_exec_queue
+    more = interpreter.add_exec(code_fragment)
+  File &quot;D:\Program Files\JetBrains\PyCharm 2019.1\helpers\pydev\_pydev_bundle\pydev_code_executor.py&quot;, line 106, in add_exec
+    more = self.do_add_exec(code_fragment)
+  File &quot;D:\Program Files\JetBrains\PyCharm 2019.1\helpers\pydev\pydevconsole.py&quot;, line 84, in do_add_exec
+    command.run()
+  File &quot;D:\Program Files\JetBrains\PyCharm 2019.1\helpers\pydev\_pydev_bundle\pydev_console_types.py&quot;, line 35, in run
+    self.more = self.interpreter.runsource(text, '&amp;lt;input&amp;gt;', symbol)
+  File &quot;D:\Python37\lib\code.py&quot;, line 74, in runsource
+    self.runcode(code)
+  File &quot;D:\Python37\lib\code.py&quot;, line 90, in runcode
+    exec(code, self.locals)
+  File &quot;&amp;lt;input&amp;gt;&quot;, line 1, in &amp;lt;module&amp;gt;
+  File &quot;D:\Program Files\JetBrains\PyCharm 2019.1\helpers\pydev\_pydev_bundle\pydev_umd.py&quot;, line 197, in runfile
+    pydev_imports.execfile(filename, global_vars, local_vars)  # execute the script
+  File &quot;D:\Program Files\JetBrains\PyCharm 2019.1\helpers\pydev\_pydev_imps\_pydev_execfile.py&quot;, line 18, in execfile
+    exec(compile(contents+&quot;\n&quot;, file, 'exec'), glob, loc)
+  File &quot;E:/PycharmProjects/predict_call/tf-testload.py&quot;, line 17, in &amp;lt;module&amp;gt;
+    saver=tf.train.import_meta_graph('D:/waifu_recognition_master/waifu_recognition-master/waifu_recognition_model/model.ckpt.meta')
+  File &quot;D:\Python37\lib\site-packages\tensorflow\python\training\saver.py&quot;, line 1435, in import_meta_graph
+    meta_graph_or_file, clear_devices, import_scope, **kwargs)[0]
+  File &quot;D:\Python37\lib\site-packages\tensorflow\python\training\saver.py&quot;, line 1457, in _import_meta_graph_with_return_elements
+    **kwargs))
+  File &quot;D:\Python37\lib\site-packages\tensorflow\python\framework\meta_graph.py&quot;, line 806, in import_scoped_meta_graph_with_return_elements
+    return_elements=return_elements)
+  File &quot;D:\Python37\lib\site-packages\tensorflow\python\util\deprecation.py&quot;, line 507, in new_func
+    return func(*args, **kwargs)
+  File &quot;D:\Python37\lib\site-packages\tensorflow\python\framework\importer.py&quot;, line 442, in import_graph_def
+    _ProcessNewOps(graph)
+  File &quot;D:\Python37\lib\site-packages\tensorflow\python\framework\importer.py&quot;, line 235, in _ProcessNewOps
+    for new_op in graph._add_new_tf_operations(compute_devices=False):  # pylint: disable=protected-access
+  File &quot;D:\Python37\lib\site-packages\tensorflow\python\framework\ops.py&quot;, line 3433, in _add_new_tf_operations
+    for c_op in c_api_util.new_tf_operations(self)
+  File &quot;D:\Python37\lib\site-packages\tensorflow\python\framework\ops.py&quot;, line 3433, in &amp;lt;listcomp&amp;gt;
+    for c_op in c_api_util.new_tf_operations(self)
+  File &quot;D:\Python37\lib\site-packages\tensorflow\python\framework\ops.py&quot;, line 3325, in _create_op_from_tf_operation
+    ret = Operation(c_op, self)
+  File &quot;D:\Python37\lib\site-packages\tensorflow\python\framework\ops.py&quot;, line 1801, in __init__
+    self._traceback = tf_stack.extract_stack()
+NotFoundError (see above for traceback): Key BoxPredictor_0/BoxEncodingPredictor/biases not found in checkpoint
+     [[node save/RestoreV2 (defined at E:/PycharmProjects/predict_call/tf-testload.py:17) ]]
+During handling of the above exception, another exception occurred:
+Traceback (most recent call last):
+  File &quot;D:\Python37\lib\site-packages\tensorflow\python\training\saver.py&quot;, line 1286, in restore
+    names_to_keys = object_graph_key_mapping(save_path)
+  File &quot;D:\Python37\lib\site-packages\tensorflow\python\training\saver.py&quot;, line 1591, in object_graph_key_mapping
+    checkpointable.OBJECT_GRAPH_PROTO_KEY)
+  File &quot;D:\Python37\lib\site-packages\tensorflow\python\pywrap_tensorflow_internal.py&quot;, line 370, in get_tensor
+    status)
+  File &quot;D:\Python37\lib\site-packages\tensorflow\python\framework\errors_impl.py&quot;, line 528, in __exit__
+    c_api.TF_GetCode(self.status.status))
+tensorflow.python.framework.errors_impl.NotFoundError: Key _CHECKPOINTABLE_OBJECT_GRAPH not found in checkpoint
+During handling of the above exception, another exception occurred:
+Traceback (most recent call last):
+  File &quot;&amp;lt;input&amp;gt;&quot;, line 1, in &amp;lt;module&amp;gt;
+  File &quot;D:\Program Files\JetBrains\PyCharm 2019.1\helpers\pydev\_pydev_bundle\pydev_umd.py&quot;, line 197, in runfile
+    pydev_imports.execfile(filename, global_vars, local_vars)  # execute the script
+  File &quot;D:\Program Files\JetBrains\PyCharm 2019.1\helpers\pydev\_pydev_imps\_pydev_execfile.py&quot;, line 18, in execfile
+    exec(compile(contents+&quot;\n&quot;, file, 'exec'), glob, loc)
+  File &quot;E:/PycharmProjects/predict_call/tf-testload.py&quot;, line 19, in &amp;lt;module&amp;gt;
+    g=saver.restore(sess, 'models/tf-test4')
+  File &quot;D:\Python37\lib\site-packages\tensorflow\python\training\saver.py&quot;, line 1292, in restore
+    err, &quot;a Variable name or other graph key that is missing&quot;)
+tensorflow.python.framework.errors_impl.NotFoundError: Restoring from checkpoint failed. This is most likely due to a Variable name or other graph key that is missing from the checkpoint. Please ensure that you have not altered the graph expected based on the checkpoint. Original error:
+Key BoxPredictor_0/BoxEncodingPredictor/biases not found in checkpoint
+     [[node save/RestoreV2 (defined at E:/PycharmProjects/predict_call/tf-testload.py:17) ]]
+Caused by op 'save/RestoreV2', defined at:
+  File &quot;D:\Program Files\JetBrains\PyCharm 2019.1\helpers\pydev\pydevconsole.py&quot;, line 399, in &amp;lt;module&amp;gt;
+    pydevconsole.start_client(host, port)
+  File &quot;D:\Program Files\JetBrains\PyCharm 2019.1\helpers\pydev\pydevconsole.py&quot;, line 327, in start_client
+    process_exec_queue(interpreter)
+  File &quot;D:\Program Files\JetBrains\PyCharm 2019.1\helpers\pydev\pydevconsole.py&quot;, line 174, in process_exec_queue
+    more = interpreter.add_exec(code_fragment)
+  File &quot;D:\Program Files\JetBrains\PyCharm 2019.1\helpers\pydev\_pydev_bundle\pydev_code_executor.py&quot;, line 106, in add_exec
+    more = self.do_add_exec(code_fragment)
+  File &quot;D:\Program Files\JetBrains\PyCharm 2019.1\helpers\pydev\pydevconsole.py&quot;, line 84, in do_add_exec
+    command.run()
+  File &quot;D:\Program Files\JetBrains\PyCharm 2019.1\helpers\pydev\_pydev_bundle\pydev_console_types.py&quot;, line 35, in run
+    self.more = self.interpreter.runsource(text, '&amp;lt;input&amp;gt;', symbol)
+  File &quot;D:\Python37\lib\code.py&quot;, line 74, in runsource
+    self.runcode(code)
+  File &quot;D:\Python37\lib\code.py&quot;, line 90, in runcode
+    exec(code, self.locals)
+  File &quot;&amp;lt;input&amp;gt;&quot;, line 1, in &amp;lt;module&amp;gt;
+  File &quot;D:\Program Files\JetBrains\PyCharm 2019.1\helpers\pydev\_pydev_bundle\pydev_umd.py&quot;, line 197, in runfile
+    pydev_imports.execfile(filename, global_vars, local_vars)  # execute the script
+  File &quot;D:\Program Files\JetBrains\PyCharm 2019.1\helpers\pydev\_pydev_imps\_pydev_execfile.py&quot;, line 18, in execfile
+    exec(compile(contents+&quot;\n&quot;, file, 'exec'), glob, loc)
+  File &quot;E:/PycharmProjects/predict_call/tf-testload.py&quot;, line 17, in &amp;lt;module&amp;gt;
+    saver=tf.train.import_meta_graph('D:/waifu_recognition_master/waifu_recognition-master/waifu_recognition_model/model.ckpt.meta')
+  File &quot;D:\Python37\lib\site-packages\tensorflow\python\training\saver.py&quot;, line 1435, in import_meta_graph
+    meta_graph_or_file, clear_devices, import_scope, **kwargs)[0]
+  File &quot;D:\Python37\lib\site-packages\tensorflow\python\training\saver.py&quot;, line 1457, in _import_meta_graph_with_return_elements
+    **kwargs))
+  File &quot;D:\Python37\lib\site-packages\tensorflow\python\framework\meta_graph.py&quot;, line 806, in import_scoped_meta_graph_with_return_elements
+    return_elements=return_elements)
+  File &quot;D:\Python37\lib\site-packages\tensorflow\python\util\deprecation.py&quot;, line 507, in new_func
+    return func(*args, **kwargs)
+  File &quot;D:\Python37\lib\site-packages\tensorflow\python\framework\importer.py&quot;, line 442, in import_graph_def
+    _ProcessNewOps(graph)
+  File &quot;D:\Python37\lib\site-packages\tensorflow\python\framework\importer.py&quot;, line 235, in _ProcessNewOps
+    for new_op in graph._add_new_tf_operations(compute_devices=False):  # pylint: disable=protected-access
+  File &quot;D:\Python37\lib\site-packages\tensorflow\python\framework\ops.py&quot;, line 3433, in _add_new_tf_operations
+    for c_op in c_api_util.new_tf_operations(self)
+  File &quot;D:\Python37\lib\site-packages\tensorflow\python\framework\ops.py&quot;, line 3433, in &amp;lt;listcomp&amp;gt;
+    for c_op in c_api_util.new_tf_operations(self)
+  File &quot;D:\Python37\lib\site-packages\tensorflow\python\framework\ops.py&quot;, line 3325, in _create_op_from_tf_operation
+    ret = Operation(c_op, self)
+  File &quot;D:\Python37\lib\site-packages\tensorflow\python\framework\ops.py&quot;, line 1801, in __init__
+    self._traceback = tf_stack.extract_stack()
+NotFoundError (see above for traceback): Restoring from checkpoint failed. This is most likely due to a Variable name or other graph key that is missing from the checkpoint. Please ensure that you have not altered the graph expected based on the checkpoint. Original error:
+Key BoxPredictor_0/BoxEncodingPredictor/biases not found in checkpoint
+     [[node save/RestoreV2 (defined at E:/PycharmProjects/predict_call/tf-testload.py:17) ]]
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;Now the code without error is&lt;/p&gt;
+
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;saver&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;tf&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;train&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;import_meta_graph&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'D:/waifu_recognition_master/waifu_recognition-master/waifu_recognition_model/model.ckpt.meta'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;g&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;saver&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;restore&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;sess&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'D:/waifu_recognition_master/waifu_recognition-master/waifu_recognition_model/model.ckpt'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;or&lt;/p&gt;
+
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;saver&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;tf&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;train&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;import_meta_graph&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'D:/waifu_recognition_master/waifu_recognition-master/waifu_recognition_model/model.ckpt.meta'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;latest_checkpoint&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;tf&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;train&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;latest_checkpoint&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'D:/waifu_recognition_master/waifu_recognition-master/checkpoint'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;latest_checkpoint&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;g&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;saver&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;restore&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;sess&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;latest_checkpoint&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;But&lt;/p&gt;
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;tf&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;all_variables&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;())&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;tf&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;trainable_variables&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;())&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;will display empty list&lt;/p&gt;</content><author><name></name></author><summary type="html">When I try to load meta file from checkpoint directory saver=tf.train.import_meta_graph('D:/waifu_recognition_master/waifu_recognition-master/checkpoint/model.ckpt-78681.meta')</summary></entry><entry><title type="html">Tensorflow model save and load</title><link href="http://localhost:4000/jekyll/update/2019/09/30/tensorflow-model-save-load.html" rel="alternate" type="text/html" title="Tensorflow model save and load" /><published>2019-09-30T13:43:40+08:00</published><updated>2019-09-30T13:43:40+08:00</updated><id>http://localhost:4000/jekyll/update/2019/09/30/tensorflow-model-save-load</id><content type="html" xml:base="http://localhost:4000/jekyll/update/2019/09/30/tensorflow-model-save-load.html">&lt;p&gt;##Save&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;saver = tf.train.Saver()
+saver.save(sess,'models/tf-test4')
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;hr /&gt;
+&lt;h2 id=&quot;load&quot;&gt;Load&lt;/h2&gt;
+
+&lt;p&gt;I removed variables definition in save part&lt;/p&gt;
+
+&lt;p&gt;And if I kept &lt;code class=&quot;highlighter-rouge&quot;&gt;saver = tf.train.Saver()&lt;/code&gt;, following error is shown&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;Traceback (most recent call last):
+  File &quot;&amp;lt;input&amp;gt;&quot;, line 1, in &amp;lt;module&amp;gt;
+  File &quot;D:\Program Files\JetBrains\PyCharm 2019.1\helpers\pydev\_pydev_bundle\pydev_umd.py&quot;, line 197, in runfile
+    pydev_imports.execfile(filename, global_vars, local_vars)  # execute the script
+  File &quot;D:\Program Files\JetBrains\PyCharm 2019.1\helpers\pydev\_pydev_imps\_pydev_execfile.py&quot;, line 18, in execfile
+    exec(compile(contents+&quot;\n&quot;, file, 'exec'), glob, loc)
+  File &quot;E:/PycharmProjects/predict_call/tf-testload.py&quot;, line 11, in &amp;lt;module&amp;gt;
+    saver = tf.train.Saver()
+  File &quot;D:\Python37\lib\site-packages\tensorflow\python\training\saver.py&quot;, line 832, in __init__
+    self.build()
+  File &quot;D:\Python37\lib\site-packages\tensorflow\python\training\saver.py&quot;, line 844, in build
+    self._build(self._filename, build_save=True, build_restore=True)
+  File &quot;D:\Python37\lib\site-packages\tensorflow\python\training\saver.py&quot;, line 869, in _build
+    raise ValueError(&quot;No variables to save&quot;)
+ValueError: No variables to save
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;It’s because I didn’t declare any variables before &lt;code class=&quot;highlighter-rouge&quot;&gt;saver = tf.train.Saver()&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;To load a model, I should use&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;saver=tf.train.import_meta_graph('models/tf-test4.meta')
+saver.restore(sess, 'models/tf-test4')
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Note that &lt;code class=&quot;highlighter-rouge&quot;&gt;restore&lt;/code&gt; method accepts a filename prefix (not tf-test4.*)&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;Then run &lt;code class=&quot;highlighter-rouge&quot;&gt;print(tf.trainable_variables())&lt;/code&gt; to display trainable variables&lt;/p&gt;
+
+&lt;p&gt;The model I saved by myself can display useful data, but the model I downloaded (waifu_recognition_model) displays an empty list.
+But in Tensorboard Grapic section, the network structure can be displayed.&lt;/p&gt;
+
+&lt;p&gt;Jekyll requires blog post files to be named according to the following format:&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;YEAR-MONTH-DAY-title.MARKUP&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;Where &lt;code class=&quot;highlighter-rouge&quot;&gt;YEAR&lt;/code&gt; is a four-digit number, &lt;code class=&quot;highlighter-rouge&quot;&gt;MONTH&lt;/code&gt; and &lt;code class=&quot;highlighter-rouge&quot;&gt;DAY&lt;/code&gt; are both two-digit numbers, and &lt;code class=&quot;highlighter-rouge&quot;&gt;MARKUP&lt;/code&gt; is the file extension representing the format used in the file. After that, include the necessary front matter. Take a look at the source for this post to get an idea about how it works.&lt;/p&gt;
+
+&lt;p&gt;Jekyll also offers powerful support for code snippets:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;print_hi&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+  &lt;span class=&quot;nb&quot;&gt;puts&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;Hi, &lt;/span&gt;&lt;span class=&quot;si&quot;&gt;#{&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;print_hi&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'Tom'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;#=&amp;gt; prints 'Hi, Tom' to STDOUT.&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Check out the &lt;a href=&quot;https://jekyllrb.com/docs/home&quot;&gt;Jekyll docs&lt;/a&gt; for more info on how to get the most out of Jekyll. File all bugs/feature requests at &lt;a href=&quot;https://github.com/jekyll/jekyll&quot;&gt;Jekyll’s GitHub repo&lt;/a&gt;. If you have questions, you can ask them on &lt;a href=&quot;https://talk.jekyllrb.com/&quot;&gt;Jekyll Talk&lt;/a&gt;.&lt;/p&gt;</content><author><name></name></author><summary type="html">##Save</summary></entry></feed>
