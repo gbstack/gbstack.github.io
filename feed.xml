@@ -1,4 +1,275 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2019-09-30T17:19:31+08:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Your awesome title</title><subtitle>Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.</subtitle><entry><title type="html">Tensorflow load checkpoint</title><link href="http://localhost:4000/jekyll/update/2019/09/30/tensorflow-load-checkpoint.html" rel="alternate" type="text/html" title="Tensorflow load checkpoint" /><published>2019-09-30T16:43:40+08:00</published><updated>2019-09-30T16:43:40+08:00</updated><id>http://localhost:4000/jekyll/update/2019/09/30/tensorflow-load-checkpoint</id><content type="html" xml:base="http://localhost:4000/jekyll/update/2019/09/30/tensorflow-load-checkpoint.html">&lt;p&gt;When I try to load meta file from checkpoint directory
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2019-10-12T16:28:40+08:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Your awesome title</title><subtitle>Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.</subtitle><entry><title type="html">Calculus Applications in Computer Science</title><link href="http://localhost:4000/jekyll/update/2019/10/12/calculus-applications-in-computer-science.html" rel="alternate" type="text/html" title="Calculus Applications in Computer Science" /><published>2019-10-12T13:30:40+08:00</published><updated>2019-10-12T13:30:40+08:00</updated><id>http://localhost:4000/jekyll/update/2019/10/12/calculus-applications-in-computer-science</id><content type="html" xml:base="http://localhost:4000/jekyll/update/2019/10/12/calculus-applications-in-computer-science.html">&lt;p&gt;Polar Coordinate: Hough Line Transform&lt;/p&gt;
+
+&lt;p&gt;Series
+Power Series Expansion: similar to Taylor Expansion, which is mentioned many times in 
+Statistical Machine Learning book&lt;/p&gt;
+
+&lt;p&gt;Fourier Series: https://in.answers.yahoo.com/question/index?qid=20100822005038AAaIVK8&amp;amp;guccounter=1&amp;amp;guce_referrer=aHR0cHM6Ly9jbi5iaW5nLmNvbS8&amp;amp;guce_referrer_sig=AQAAADrxHnCdST-Gk1tW5LYC-yXTbLfFxZON5PCeu6ADQEslHSvh9zm2neE8GsA2sz5s7ehUa5KDeJ7_Cq1dQm8Xlp4hqfP6Nk0Gd3l5KhctEroDBnea9dS6zLr6am5mSmiLlDskk7ihgU7goUfskc9m9k7ZDKSAnkgOuzbvw1zzlpAx&lt;/p&gt;
+
+&lt;p&gt;In the above post it’s saying that JPEG compression is using fourier series, following is the original words&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;The changeing pattern of colours in an image can be fitted by an fourier series (in practise it is a cosine series that is used) As an infinite series could take an infinite amount of information to store it, that doesn't seem like a good thing, but the infinite series can be approximated by the first few terms.
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Fourier Transform&lt;/p&gt;
+
+&lt;p&gt;I know better about this:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;mfcc&lt;/li&gt;
+  &lt;li&gt;telecom, signaling, etc. like FDMA?&lt;/li&gt;
+  &lt;li&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;http://www.dspguide.com/ch27/6.htm&lt;/p&gt;
+
+&lt;p&gt;http://nautil.us/blog/the-math-trick-behind-mp3s-jpegs-and-homer-simpsons-face&lt;/p&gt;
+
+&lt;p&gt;https://plus.maths.org/content/fourier-transforms-images&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;logx(y)=n =&amp;gt; x^n=y
+2^log2(n)=n&lt;/p&gt;
+
+&lt;p&gt;loga(b) = logc(b)/logc(a)&lt;/p&gt;
+
+&lt;p&gt;loga(b)=n =&amp;gt; a^n=b&lt;/p&gt;
+
+&lt;p&gt;logc(b)=logc(a^n)=nlogc(a) =&amp;gt; logc(b)/logc(a)=n=loga(b)&lt;/p&gt;</content><author><name></name></author><summary type="html">Polar Coordinate: Hough Line Transform</summary></entry><entry><title type="html">PyTorch Get Version Number</title><link href="http://localhost:4000/jekyll/update/2019/10/12/pytorch-get-version-number.html" rel="alternate" type="text/html" title="PyTorch Get Version Number" /><published>2019-10-12T13:30:40+08:00</published><updated>2019-10-12T13:30:40+08:00</updated><id>http://localhost:4000/jekyll/update/2019/10/12/pytorch-get-version-number</id><content type="html" xml:base="http://localhost:4000/jekyll/update/2019/10/12/pytorch-get-version-number.html">&lt;p&gt;To check the currently used pytorch version number, we can use &lt;code class=&quot;highlighter-rouge&quot;&gt;torch.__version__&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;print(torch.__version__)&lt;/code&gt;&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;1.0.1
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name></name></author><summary type="html">To check the currently used pytorch version number, we can use torch.__version__</summary></entry><entry><title type="html">Calculus Applications in Computer Science</title><link href="http://localhost:4000/jekyll/update/2019/10/12/fourier-transform-fourier-series.html" rel="alternate" type="text/html" title="Calculus Applications in Computer Science" /><published>2019-10-12T13:30:40+08:00</published><updated>2019-10-12T13:30:40+08:00</updated><id>http://localhost:4000/jekyll/update/2019/10/12/fourier-transform-fourier-series</id><content type="html" xml:base="http://localhost:4000/jekyll/update/2019/10/12/fourier-transform-fourier-series.html">&lt;p&gt;https://math.stackexchange.com/questions/221137/what-is-the-difference-between-fourier-series-and-fourier-transformation&lt;/p&gt;</content><author><name></name></author><summary type="html">https://math.stackexchange.com/questions/221137/what-is-the-difference-between-fourier-series-and-fourier-transformation</summary></entry><entry><title type="html">MongoDB show current executing queries</title><link href="http://localhost:4000/jekyll/update/2019/10/11/mongodb-show-current-executing-queries.html" rel="alternate" type="text/html" title="MongoDB show current executing queries" /><published>2019-10-11T10:30:40+08:00</published><updated>2019-10-11T10:30:40+08:00</updated><id>http://localhost:4000/jekyll/update/2019/10/11/mongodb-show-current-executing-queries</id><content type="html" xml:base="http://localhost:4000/jekyll/update/2019/10/11/mongodb-show-current-executing-queries.html">&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;db.currentOp(true).inprog.forEach(function(x) { print(x.client_s) })&lt;/code&gt;
+not working&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;[unknown type]
+[unknown type]
+[unknown type]
+[unknown type]
+[unknown type]
+[unknown type]
+[unknown type]
+[unknown type]
+[unknown type]
+[unknown type]
+[unknown type]
+[unknown type]
+[unknown type]
+[unknown type]
+[unknown type]
+[unknown type]
+[unknown type]
+[unknown type]
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;db.currentOp(true).inprog&lt;/code&gt;&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;[
+        {
+                &quot;desc&quot; : &quot;conn230712&quot;,
+                &quot;threadId&quot; : &quot;139739116345088&quot;,
+                &quot;connectionId&quot; : 230712,
+                &quot;client&quot; : &quot;127.0.0.1:35268&quot;,
+                &quot;active&quot; : false
+        },
+        {
+                &quot;desc&quot; : &quot;conn230709&quot;,
+                &quot;threadId&quot; : &quot;139739153102592&quot;,
+                &quot;connectionId&quot; : 230709,
+                &quot;client&quot; : &quot;127.0.0.1:35262&quot;,
+                &quot;active&quot; : true,
+                &quot;opid&quot; : 41559645,
+                &quot;secs_running&quot; : 0,
+                &quot;microsecs_running&quot; : NumberLong(20),
+                &quot;op&quot; : &quot;command&quot;,
+                &quot;ns&quot; : &quot;admin.$cmd&quot;,
+                &quot;query&quot; : {
+                        &quot;currentOp&quot; : 1,
+                        &quot;$all&quot; : true
+                },
+                &quot;numYields&quot; : 0,
+                &quot;locks&quot; : {
+
+                },
+                &quot;waitingForLock&quot; : false,
+                &quot;lockStats&quot; : {
+
+                }
+        },
+        {
+                &quot;desc&quot; : &quot;conn230674&quot;,
+                &quot;threadId&quot; : &quot;139739115292416&quot;,
+                &quot;connectionId&quot; : 230674,
+                &quot;client&quot; : &quot;127.0.0.1:35192&quot;,
+                &quot;active&quot; : false
+        },
+        {
+                &quot;desc&quot; : &quot;conn230673&quot;,
+                &quot;threadId&quot; : &quot;139739117397760&quot;,
+                &quot;connectionId&quot; : 230673,
+                &quot;client&quot; : &quot;127.0.0.1:35188&quot;,
+                &quot;active&quot; : false
+        },
+        {
+                &quot;desc&quot; : &quot;conn230638&quot;,
+                &quot;threadId&quot; : &quot;139739166787328&quot;,
+                &quot;connectionId&quot; : 230638,
+                &quot;client&quot; : &quot;127.0.0.1:35108&quot;,
+                &quot;active&quot; : false
+        },
+        {
+                &quot;desc&quot; : &quot;conn230713&quot;,
+                &quot;threadId&quot; : &quot;139739124766464&quot;,
+                &quot;connectionId&quot; : 230713,
+                &quot;client&quot; : &quot;127.0.0.1:35270&quot;,
+                &quot;active&quot; : true,
+                &quot;opid&quot; : 41559644,
+                &quot;secs_running&quot; : 0,
+                &quot;microsecs_running&quot; : NumberLong(8741),
+                &quot;op&quot; : &quot;query&quot;,
+                &quot;ns&quot; : &quot;videos.scrapped_videos&quot;,
+                &quot;query&quot; : {
+                        &quot;find&quot; : &quot;scrapped_videos&quot;,
+                        &quot;filter&quot; : {
+                                &quot;VideoId&quot; : &quot;ELLfTKu24KY&quot;
+                        }
+                },
+                &quot;numYields&quot; : 77,
+                &quot;locks&quot; : {
+                        &quot;Global&quot; : &quot;r&quot;,
+                        &quot;Database&quot; : &quot;r&quot;,
+                        &quot;Collection&quot; : &quot;r&quot;
+                },
+                &quot;waitingForLock&quot; : false,
+                &quot;lockStats&quot; : {
+                        &quot;Global&quot; : {
+                                &quot;acquireCount&quot; : {
+                                        &quot;r&quot; : NumberLong(156)
+                                }
+                        },
+                        &quot;Database&quot; : {
+                                &quot;acquireCount&quot; : {
+                                        &quot;r&quot; : NumberLong(78)
+                                }
+                        },
+                        &quot;Collection&quot; : {
+                                &quot;acquireCount&quot; : {
+                                        &quot;r&quot; : NumberLong(78)
+                                }
+                        }
+                }
+        },
+        {
+                &quot;desc&quot; : &quot;conn230637&quot;,
+                &quot;threadId&quot; : &quot;139739168892672&quot;,
+                &quot;connectionId&quot; : 230637,
+                &quot;client&quot; : &quot;127.0.0.1:35104&quot;,
+                &quot;active&quot; : false
+        },
+        {
+                &quot;desc&quot; : &quot;conn230146&quot;,
+                &quot;threadId&quot; : &quot;139739156260608&quot;,
+                &quot;connectionId&quot; : 230146,
+                &quot;client&quot; : &quot;127.0.0.1:60966&quot;,
+                &quot;active&quot; : false
+        },
+        {
+                &quot;desc&quot; : &quot;conn230143&quot;,
+                &quot;threadId&quot; : &quot;139739152049920&quot;,
+                &quot;connectionId&quot; : 230143,
+                &quot;client&quot; : &quot;127.0.0.1:60958&quot;,
+                &quot;active&quot; : false
+        },
+        {
+                &quot;desc&quot; : &quot;conn230142&quot;,
+                &quot;threadId&quot; : &quot;139739158365952&quot;,
+                &quot;connectionId&quot; : 230142,
+                &quot;client&quot; : &quot;127.0.0.1:60954&quot;,
+                &quot;active&quot; : false
+        },
+        {
+                &quot;desc&quot; : &quot;RangeDeleter&quot;,
+                &quot;threadId&quot; : &quot;139739221419776&quot;,
+                &quot;active&quot; : false
+        },
+        {
+                &quot;desc&quot; : &quot;TTLMonitor&quot;,
+                &quot;threadId&quot; : &quot;139739213027072&quot;,
+                &quot;active&quot; : false
+        },
+        {
+                &quot;desc&quot; : &quot;conn230147&quot;,
+                &quot;threadId&quot; : &quot;139739121608448&quot;,
+                &quot;connectionId&quot; : 230147,
+                &quot;client&quot; : &quot;127.0.0.1:60970&quot;,
+                &quot;active&quot; : false
+        },
+        {
+                &quot;desc&quot; : &quot;clientcursormon&quot;,
+                &quot;threadId&quot; : &quot;139739204634368&quot;,
+                &quot;active&quot; : false
+        },
+        {
+                &quot;desc&quot; : &quot;signalProcessingThread&quot;,
+                &quot;threadId&quot; : &quot;139739296954112&quot;,
+                &quot;active&quot; : false
+        },
+        {
+                &quot;desc&quot; : &quot;ftdc&quot;,
+                &quot;threadId&quot; : &quot;139739179456256&quot;,
+                &quot;active&quot; : false
+        },
+        {
+                &quot;desc&quot; : &quot;initandlisten&quot;,
+                &quot;threadId&quot; : &quot;139739397530944&quot;,
+                &quot;active&quot; : false
+        },
+        {
+                &quot;desc&quot; : &quot;WTJournalFlusher&quot;,
+                &quot;threadId&quot; : &quot;139739238205184&quot;,
+                &quot;active&quot; : false
+        }
+]
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;db.killOp(1344808)&lt;/p&gt;
+
+&lt;p&gt;db.currentOp().inprog.filter(x =&amp;gt; x.ns === ‘local.oplog.rs’).forEach(function(x) { print(x.client ? x.client.replace(/:.*$/,’’) : ‘-‘) })&lt;/p&gt;
+
+&lt;table&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;db.currentOp(true).inprog.reduce((accumulator, connection) =&amp;gt; { ipaddress = connection.client ? connection.client.split(“:”)[0] : “unknown”; accumulator[ipaddress] = (accumulator[ipaddress]&lt;/td&gt;
+      &lt;td&gt; &lt;/td&gt;
+      &lt;td&gt;0) + 1; accumulator[“TOTAL_CONNECTION_COUNT”]++; return accumulator; }, { TOTAL_CONNECTION_COUNT: 0 })&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;</content><author><name></name></author><summary type="html">db.currentOp(true).inprog.forEach(function(x) { print(x.client_s) }) not working</summary></entry><entry><title type="html">PaddleHub Emotion Detection</title><link href="http://localhost:4000/jekyll/update/2019/10/11/paddlehub-emotion-detection.html" rel="alternate" type="text/html" title="PaddleHub Emotion Detection" /><published>2019-10-11T10:30:40+08:00</published><updated>2019-10-11T10:30:40+08:00</updated><id>http://localhost:4000/jekyll/update/2019/10/11/paddlehub-emotion-detection</id><content type="html" xml:base="http://localhost:4000/jekyll/update/2019/10/11/paddlehub-emotion-detection.html">&lt;p&gt;https://www.paddlepaddle.org.cn/hub?filter=en_category&amp;amp;value=SentimentAnalysis
+Lists the emotion detection models provided by PaddleHub&lt;/p&gt;
+
+&lt;p&gt;I only checked emotion_detection_textcnn model, it’s based on &lt;strong&gt;TextCNN&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;https://github.com/PaddlePaddle/models/tree/develop/PaddleNLP/emotion_detection&lt;/p&gt;
+
+&lt;p&gt;https://github.com/PaddlePaddle/models/tree/develop/PaddleNLP/sentiment_classification&lt;/p&gt;
+
+&lt;p&gt;It seems the content of above two links are same?&lt;/p&gt;
+
+&lt;p&gt;There is also a plain CNN model, according to its description, it’s different from the TextCNN model. 
+(It’s saying TextCNN is using multiple convolutional kernel)&lt;/p&gt;
+
+&lt;p&gt;In summary, its provided emotion detection models include BOW, LSTM, GRU, CNN, BiLSTM, BERT, ERNIE&lt;/p&gt;
+
+&lt;p&gt;The BOW is using BOW as feature and FCN as network structure.&lt;/p&gt;</content><author><name></name></author><summary type="html">https://www.paddlepaddle.org.cn/hub?filter=en_category&amp;amp;value=SentimentAnalysis Lists the emotion detection models provided by PaddleHub</summary></entry><entry><title type="html">PaddleHub Emotion Detection</title><link href="http://localhost:4000/jekyll/update/2019/10/11/python-iterator-and-generator.html" rel="alternate" type="text/html" title="PaddleHub Emotion Detection" /><published>2019-10-11T10:30:40+08:00</published><updated>2019-10-11T10:30:40+08:00</updated><id>http://localhost:4000/jekyll/update/2019/10/11/python-iterator-and-generator</id><content type="html" xml:base="http://localhost:4000/jekyll/update/2019/10/11/python-iterator-and-generator.html">&lt;p&gt;Both &lt;code class=&quot;highlighter-rouge&quot;&gt;Iterable&lt;/code&gt; and generator can be used for &lt;code class=&quot;highlighter-rouge&quot;&gt;for .. in ..&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;For my archives iteration code, it’s easier to use generator(yield).
+Because creating generator need create class and implement &lt;code class=&quot;highlighter-rouge&quot;&gt;__iter__&lt;/code&gt; and &lt;code class=&quot;highlighter-rouge&quot;&gt;next&lt;/code&gt; methods, and some 
+variables need to change to &lt;code class=&quot;highlighter-rouge&quot;&gt;self.&lt;/code&gt; style. And another reason is I used two level &lt;code class=&quot;highlighter-rouge&quot;&gt;for&lt;/code&gt; loop 
+(harder to implement for &lt;code class=&quot;highlighter-rouge&quot;&gt;Iterator&lt;/code&gt;?)&lt;/p&gt;</content><author><name></name></author><summary type="html">Both Iterable and generator can be used for for .. in ..</summary></entry><entry><title type="html">MongoDB query exclude specific fileds</title><link href="http://localhost:4000/jekyll/update/2019/10/11/mongodb-query-fields-except-specific-field.html" rel="alternate" type="text/html" title="MongoDB query exclude specific fileds" /><published>2019-10-11T10:30:40+08:00</published><updated>2019-10-11T10:30:40+08:00</updated><id>http://localhost:4000/jekyll/update/2019/10/11/mongodb-query-fields-except-specific-field</id><content type="html" xml:base="http://localhost:4000/jekyll/update/2019/10/11/mongodb-query-fields-except-specific-field.html">&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;db.getCollection('playlists').find({AssignedUser:'18853684253'},{Videos:-1})&lt;/code&gt; not working,
+it only return Videos field, it’s same as
+&lt;code class=&quot;highlighter-rouge&quot;&gt;db.getCollection('playlists').find({AssignedUser:'18853684253'},{Videos:1})&lt;/code&gt;&lt;/p&gt;</content><author><name></name></author><summary type="html">db.getCollection('playlists').find({AssignedUser:'18853684253'},{Videos:-1}) not working, it only return Videos field, it’s same as db.getCollection('playlists').find({AssignedUser:'18853684253'},{Videos:1})</summary></entry><entry><title type="html">Tensorflow load checkpoint</title><link href="http://localhost:4000/jekyll/update/2019/09/30/tensorflow-load-checkpoint.html" rel="alternate" type="text/html" title="Tensorflow load checkpoint" /><published>2019-09-30T16:43:40+08:00</published><updated>2019-09-30T16:43:40+08:00</updated><id>http://localhost:4000/jekyll/update/2019/09/30/tensorflow-load-checkpoint</id><content type="html" xml:base="http://localhost:4000/jekyll/update/2019/09/30/tensorflow-load-checkpoint.html">&lt;p&gt;When I try to load meta file from checkpoint directory
 &lt;code class=&quot;highlighter-rouge&quot;&gt;saver=tf.train.import_meta_graph('D:/waifu_recognition_master/waifu_recognition-master/checkpoint/model.ckpt-78681.meta')&lt;/code&gt;&lt;/p&gt;
 
 &lt;p&gt;I got following error&lt;/p&gt;
